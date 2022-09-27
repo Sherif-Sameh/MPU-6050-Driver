@@ -6,8 +6,8 @@ This document describes the MPU6050 driver.
 
 Current version: 1.0
 
-	The driver builds on the I2C/TWI driver for the ATMega32 microcontroller family, found at https://github.com/Sherif-Sameh/ATMega32-I2C-Driver to communicate 
-with the MPU6050 through I2C communication. However, the user must only initialize the I2C peripheral using the library then all the communication is handeled 
+The driver builds on the I2C/TWI driver for the ATMega32 microcontroller family, found at https://github.com/Sherif-Sameh/ATMega32-I2C-Driver, to communicate
+with the MPU6050 through I2C communication. However, the user must only initialize the I2C peripheral using the library then all the communication is handeled
 through the MPU6050 library and there is no need to include the I2C driver's header file as the MPU6050 library's header files will include it automatically.
 
 Important: The I2C source and header file must be located in the same directory as the MPU6050 library files. 
