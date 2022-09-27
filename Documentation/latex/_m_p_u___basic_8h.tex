@@ -1,0 +1,190 @@
+\hypertarget{_m_p_u___basic_8h}{}\doxysection{MPU\+\_\+\+Basic.\+h File Reference}
+\label{_m_p_u___basic_8h}\index{MPU\_Basic.h@{MPU\_Basic.h}}
+
+
+For basic operation of the MPU6050.  
+
+
+{\ttfamily \#include \char`\"{}MPU\+\_\+\+Shared.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_a2af13c87c6049b0933511bf2432f93fe}{wake\+Up}} ()
+\begin{DoxyCompactList}\small\item\em This function writes to MPU6050\textquotesingle{}s power management register in order to get the device out of its default state at startup which is sleep mode. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_ab4c1323116d55098039cae30b0bba485}{device\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em This function will reset all the MPU6050\textquotesingle{}s registers to their default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_ab6a6b7236260a1bfb50cfdaccd1ac287}{set\+Acc\+FS\+\_\+\+Range}} (char FS\+\_\+\+SELECT)
+\begin{DoxyCompactList}\small\item\em This function sets full scale range for the 3 accelerometers. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_a603f65b6b53b7e220dfb9c1f2a053cdf}{set\+Gyro\+FS\+\_\+\+Range}} (char FS\+\_\+\+SELECT)
+\begin{DoxyCompactList}\small\item\em This function sets full scale range for the 3 gyroscopes. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_a229d941e7fbdfdfbabef0ca8104de314}{get\+Acc\+Readings}} (int $\ast$data, char skip\+From\+Beginning, char skip\+From\+End)
+\begin{DoxyCompactList}\small\item\em This function retrieves the raw accelerometer readings from the MPU6050. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}{get\+Gyro\+Readings}} (int $\ast$data, char skip\+From\+Beginning, char skip\+From\+End)
+\begin{DoxyCompactList}\small\item\em This function retrieves the raw gyroscope readings from the MPU6050. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___basic_8h_a3c94d6bb5188abc8b6376803288e6373}{get\+Temp\+Readings}} (int $\ast$data)
+\begin{DoxyCompactList}\small\item\em This function retrieves the raw temperature sensor reading from the MPU6050. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For basic operation of the MPU6050. 
+
+This file includes all the prototypes for the basic functions of the MPU6050. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_p_u___basic_8h_a2af13c87c6049b0933511bf2432f93fe}\label{_m_p_u___basic_8h_a2af13c87c6049b0933511bf2432f93fe}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily char wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function writes to MPU6050\textquotesingle{}s power management register in order to get the device out of its default state at startup which is sleep mode. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}, and \mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_ab4c1323116d55098039cae30b0bba485}\label{_m_p_u___basic_8h_ab4c1323116d55098039cae30b0bba485}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!deviceReset@{deviceReset}}
+\index{deviceReset@{deviceReset}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{deviceReset()}{deviceReset()}}
+{\footnotesize\ttfamily char device\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function will reset all the MPU6050\textquotesingle{}s registers to their default values. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}, and \mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_ab6a6b7236260a1bfb50cfdaccd1ac287}\label{_m_p_u___basic_8h_ab6a6b7236260a1bfb50cfdaccd1ac287}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!setAccFS\_Range@{setAccFS\_Range}}
+\index{setAccFS\_Range@{setAccFS\_Range}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{setAccFS\_Range()}{setAccFS\_Range()}}
+{\footnotesize\ttfamily char set\+Acc\+FS\+\_\+\+Range (\begin{DoxyParamCaption}\item[{char}]{FS\+\_\+\+SELECT }\end{DoxyParamCaption})}
+
+
+
+This function sets full scale range for the 3 accelerometers. 
+
+Obviously as the range goes up, the sensor\textquotesingle{}s resolution becomes worse. 
+\begin{DoxyParams}{Parameters}
+{\em FS\+\_\+\+SELECT} & This parameter chooses the FS range and should be chosen as follows\+:
+\begin{DoxyItemize}
+\item 1 \+: +-\/ 4g
+\item 2 \+: +-\/ 8g
+\item 3 \+: +-\/ 16g
+\item all other values \+: +-\/ 2g 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_a603f65b6b53b7e220dfb9c1f2a053cdf}\label{_m_p_u___basic_8h_a603f65b6b53b7e220dfb9c1f2a053cdf}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!setGyroFS\_Range@{setGyroFS\_Range}}
+\index{setGyroFS\_Range@{setGyroFS\_Range}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{setGyroFS\_Range()}{setGyroFS\_Range()}}
+{\footnotesize\ttfamily char set\+Gyro\+FS\+\_\+\+Range (\begin{DoxyParamCaption}\item[{char}]{FS\+\_\+\+SELECT }\end{DoxyParamCaption})}
+
+
+
+This function sets full scale range for the 3 gyroscopes. 
+
+Obviously as the range goes up, the sensor\textquotesingle{}s resolution becomes worse. 
+\begin{DoxyParams}{Parameters}
+{\em FS\+\_\+\+SELECT} & This parameter chooses the FS range and should be chosen as follows\+:
+\begin{DoxyItemize}
+\item 1 \+: +-\/ 500dps (83.\+33rpm)
+\item 2 \+: +-\/ 1000dps (166.\+66rpm)
+\item 3 \+: +-\/ 2000dps (333.\+33 rpm)
+\item all other values \+: +-\/ 250dps (41.\+66rpm) 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_a229d941e7fbdfdfbabef0ca8104de314}\label{_m_p_u___basic_8h_a229d941e7fbdfdfbabef0ca8104de314}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!getAccReadings@{getAccReadings}}
+\index{getAccReadings@{getAccReadings}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{getAccReadings()}{getAccReadings()}}
+{\footnotesize\ttfamily char get\+Acc\+Readings (\begin{DoxyParamCaption}\item[{int $\ast$}]{data,  }\item[{char}]{skip\+From\+Beginning,  }\item[{char}]{skip\+From\+End }\end{DoxyParamCaption})}
+
+
+
+This function retrieves the raw accelerometer readings from the MPU6050. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the start of a signed int array that will hold the values read from the IMU. \\
+\hline
+{\em skip\+From\+Beginning} & This parameter can be used to retrieve only specific accelerometer readings and not all 3. \\
+\hline
+{\em skip\+From\+End} & This parameter can be used to retrieve only specific accelerometer readings and not all 3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__basic_examples_8cpp-example}{MPU\+\_\+\+Basic\+Examples.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}\label{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!getGyroReadings@{getGyroReadings}}
+\index{getGyroReadings@{getGyroReadings}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{getGyroReadings()}{getGyroReadings()}}
+{\footnotesize\ttfamily char get\+Gyro\+Readings (\begin{DoxyParamCaption}\item[{int $\ast$}]{data,  }\item[{char}]{skip\+From\+Beginning,  }\item[{char}]{skip\+From\+End }\end{DoxyParamCaption})}
+
+
+
+This function retrieves the raw gyroscope readings from the MPU6050. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the start of a signed int array that will hold the values read from the IMU. \\
+\hline
+{\em skip\+From\+Beginning} & This parameter can be used to retrieve only specific gyroscope readings and not all 3. \\
+\hline
+{\em skip\+From\+End} & This parameter can be used to retrieve only specific gyroscope readings and not all 3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__basic_examples_8cpp-example}{MPU\+\_\+\+Basic\+Examples.\+cpp}}, and \mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___basic_8h_a3c94d6bb5188abc8b6376803288e6373}\label{_m_p_u___basic_8h_a3c94d6bb5188abc8b6376803288e6373}} 
+\index{MPU\_Basic.h@{MPU\_Basic.h}!getTempReadings@{getTempReadings}}
+\index{getTempReadings@{getTempReadings}!MPU\_Basic.h@{MPU\_Basic.h}}
+\doxysubsubsection{\texorpdfstring{getTempReadings()}{getTempReadings()}}
+{\footnotesize\ttfamily char get\+Temp\+Readings (\begin{DoxyParamCaption}\item[{int $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+This function retrieves the raw temperature sensor reading from the MPU6050. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to a signed int that will hold the value read from the IMU. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__basic_examples_8cpp-example}{MPU\+\_\+\+Basic\+Examples.\+cpp}}.\end{Desc}

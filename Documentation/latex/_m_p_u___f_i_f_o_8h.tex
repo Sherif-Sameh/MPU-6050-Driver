@@ -1,0 +1,173 @@
+\hypertarget{_m_p_u___f_i_f_o_8h}{}\doxysection{MPU\+\_\+\+FIFO.\+h File Reference}
+\label{_m_p_u___f_i_f_o_8h}\index{MPU\_FIFO.h@{MPU\_FIFO.h}}
+
+
+For using the internal FIFO on the MPU6050.  
+
+
+{\ttfamily \#include \char`\"{}MPU\+\_\+\+Shared.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_a297bbfc81b07911eeadf69ff4c8558c4}{FIFO\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em This function resets the FIFO which will clear the FIFO buffer. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_aea39e77445a9733203b688288fc836e3}{FIFO\+\_\+\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em This function enables the FIFO, this needs to be called before enabling the FIFO for specific sensors (gyro, acc, temp). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_a5bb27f96bfd3ec81a14a0558645f9f42}{FIFO\+\_\+\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em This function disables the FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_ad08eaa28155aaa8a732c8d5977ecb2da}{read\+FIFO\+\_\+count}} (unsigned int $\ast$count)
+\begin{DoxyCompactList}\small\item\em This function retreives the no of samples currently in the FIFO buffer (in bytes) that are available to be read. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_a05572320218555bda9e9deda3bb46d35}{read\+FIFO}} (char $\ast$value)
+\begin{DoxyCompactList}\small\item\em This function reads the first byte that was written to the buffer. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_ace449fc1c8cc64ce8d9d89166c37d240}{FIFO\+\_\+\+OVF\+\_\+\+IE}} ()
+\begin{DoxyCompactList}\small\item\em This function enables the FIFO overflow interrupt. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_ab18fbfa309a9a90ad82290f941aed6c5}{gyro\+FIFO\+\_\+\+En}} ()
+\begin{DoxyCompactList}\small\item\em This function enables the FIFO for the gyroscope outputs such that their values will be copied into the FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_ad104dd5cc730077dc160e90eb7963618}{acc\+FIFO\+\_\+\+En}} ()
+\begin{DoxyCompactList}\small\item\em This function enables the FIFO for the accelerometer outputs such that their values will be copied into the FIFO. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___f_i_f_o_8h_a81ffdea3ff57ddb715973d48c65e1260}{temp\+FIFO\+\_\+\+EN}} ()
+\begin{DoxyCompactList}\small\item\em This function enables the FIFO for the temperature sensor output such that its value will be copied into the FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For using the internal FIFO on the MPU6050. 
+
+This file includes all the needed function prototypes macros to be able to use the internal FIFO for storing and readings the sensors\textquotesingle{} output values. \begin{DoxyAttention}{Attention}
+The size of the FIFO is 1024 bytes. 
+\end{DoxyAttention}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_a297bbfc81b07911eeadf69ff4c8558c4}\label{_m_p_u___f_i_f_o_8h_a297bbfc81b07911eeadf69ff4c8558c4}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!FIFO\_Reset@{FIFO\_Reset}}
+\index{FIFO\_Reset@{FIFO\_Reset}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_Reset()}{FIFO\_Reset()}}
+{\footnotesize\ttfamily char FIFO\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function resets the FIFO which will clear the FIFO buffer. 
+
+\begin{DoxyAttention}{Attention}
+The register automatically clears the bit to 0 after execution therefore there is no need to clear it manually. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_aea39e77445a9733203b688288fc836e3}\label{_m_p_u___f_i_f_o_8h_aea39e77445a9733203b688288fc836e3}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!FIFO\_Enable@{FIFO\_Enable}}
+\index{FIFO\_Enable@{FIFO\_Enable}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_Enable()}{FIFO\_Enable()}}
+{\footnotesize\ttfamily char FIFO\+\_\+\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function enables the FIFO, this needs to be called before enabling the FIFO for specific sensors (gyro, acc, temp). 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_a5bb27f96bfd3ec81a14a0558645f9f42}\label{_m_p_u___f_i_f_o_8h_a5bb27f96bfd3ec81a14a0558645f9f42}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!FIFO\_Disable@{FIFO\_Disable}}
+\index{FIFO\_Disable@{FIFO\_Disable}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_Disable()}{FIFO\_Disable()}}
+{\footnotesize\ttfamily char FIFO\+\_\+\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function disables the FIFO. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_ad08eaa28155aaa8a732c8d5977ecb2da}\label{_m_p_u___f_i_f_o_8h_ad08eaa28155aaa8a732c8d5977ecb2da}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!readFIFO\_count@{readFIFO\_count}}
+\index{readFIFO\_count@{readFIFO\_count}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{readFIFO\_count()}{readFIFO\_count()}}
+{\footnotesize\ttfamily char read\+FIFO\+\_\+count (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{count }\end{DoxyParamCaption})}
+
+
+
+This function retreives the no of samples currently in the FIFO buffer (in bytes) that are available to be read. 
+
+This should be checked before reading from the FIFO buffer to insure that it\textquotesingle{}s not empty. 
+\begin{DoxyParams}{Parameters}
+{\em count} & A pointer to an unsigned int that will store the current FIFO count. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_a05572320218555bda9e9deda3bb46d35}\label{_m_p_u___f_i_f_o_8h_a05572320218555bda9e9deda3bb46d35}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!readFIFO@{readFIFO}}
+\index{readFIFO@{readFIFO}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{readFIFO()}{readFIFO()}}
+{\footnotesize\ttfamily char read\+FIFO (\begin{DoxyParamCaption}\item[{char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+This function reads the first byte that was written to the buffer. 
+
+\begin{DoxyAttention}{Attention}
+The sensor values are written to the buffer in order from the lowest register address (59\+: AccX High) first to the highest register address (72\+: GyroZ Low). 
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A pointer to a signed char that will store the value read from the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_ace449fc1c8cc64ce8d9d89166c37d240}\label{_m_p_u___f_i_f_o_8h_ace449fc1c8cc64ce8d9d89166c37d240}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!FIFO\_OVF\_IE@{FIFO\_OVF\_IE}}
+\index{FIFO\_OVF\_IE@{FIFO\_OVF\_IE}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_OVF\_IE()}{FIFO\_OVF\_IE()}}
+{\footnotesize\ttfamily char FIFO\+\_\+\+OVF\+\_\+\+IE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function enables the FIFO overflow interrupt. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_ab18fbfa309a9a90ad82290f941aed6c5}\label{_m_p_u___f_i_f_o_8h_ab18fbfa309a9a90ad82290f941aed6c5}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!gyroFIFO\_En@{gyroFIFO\_En}}
+\index{gyroFIFO\_En@{gyroFIFO\_En}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{gyroFIFO\_En()}{gyroFIFO\_En()}}
+{\footnotesize\ttfamily char gyro\+FIFO\+\_\+\+En (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function enables the FIFO for the gyroscope outputs such that their values will be copied into the FIFO. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_ad104dd5cc730077dc160e90eb7963618}\label{_m_p_u___f_i_f_o_8h_ad104dd5cc730077dc160e90eb7963618}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!accFIFO\_En@{accFIFO\_En}}
+\index{accFIFO\_En@{accFIFO\_En}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{accFIFO\_En()}{accFIFO\_En()}}
+{\footnotesize\ttfamily char acc\+FIFO\+\_\+\+En (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function enables the FIFO for the accelerometer outputs such that their values will be copied into the FIFO. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___f_i_f_o_8h_a81ffdea3ff57ddb715973d48c65e1260}\label{_m_p_u___f_i_f_o_8h_a81ffdea3ff57ddb715973d48c65e1260}} 
+\index{MPU\_FIFO.h@{MPU\_FIFO.h}!tempFIFO\_EN@{tempFIFO\_EN}}
+\index{tempFIFO\_EN@{tempFIFO\_EN}!MPU\_FIFO.h@{MPU\_FIFO.h}}
+\doxysubsubsection{\texorpdfstring{tempFIFO\_EN()}{tempFIFO\_EN()}}
+{\footnotesize\ttfamily char temp\+FIFO\+\_\+\+EN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function enables the FIFO for the temperature sensor output such that its value will be copied into the FIFO. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}

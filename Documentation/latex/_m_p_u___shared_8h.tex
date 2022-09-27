@@ -1,0 +1,126 @@
+\hypertarget{_m_p_u___shared_8h}{}\doxysection{MPU\+\_\+\+Shared.\+h File Reference}
+\label{_m_p_u___shared_8h}\index{MPU\_Shared.h@{MPU\_Shared.h}}
+
+
+Shared functions and macros.  
+
+
+{\ttfamily \#include \char`\"{}I2\+C\+\_\+1.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_m_p_u___shared_8h_a6a26d06d2f863deedd849612a6c2a4e4}\label{_m_p_u___shared_8h_a6a26d06d2f863deedd849612a6c2a4e4}} 
+\#define {\bfseries MPU6050\+\_\+\+ADDRESS}~0x34
+\begin{DoxyCompactList}\small\item\em The 6 bit I2C address of the MPU6050 which excludes AD0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_m_p_u___shared_8h_a3bfe1eeb15ce8676cc81b637d2b7dbbf}{set\+AD0}} (char pin\+Value)
+\begin{DoxyCompactList}\small\item\em This function sets the value used for the AD0 bit in the MPU6050\textquotesingle{}s I2C 7 bit address and its value should match that of the pin i.\+e. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___shared_8h_aed3fcddfb71c0ce5ebf4e1f74fb2fcd2}{write\+To\+Reg}} (char reg\+Addr, char data)
+\begin{DoxyCompactList}\small\item\em This function writes a byte into a register on the MPU6050. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___shared_8h_a51415c7cab55990d857ee11187087e7d}{read\+From\+Reg}} (char reg\+Addr, char $\ast$data, char n)
+\begin{DoxyCompactList}\small\item\em This function will read from a register/s on the MPU6050. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___shared_8h_a10cd7c280775d4236cadad43a4073ab8}{read\+Interrupt\+Status}} (char $\ast$value)
+\begin{DoxyCompactList}\small\item\em This function reads the status of all 3 possible interrupt sources (FIFO OVF, I2C Master INT, Data RDY INT) on the MPU6050 to determine the source which triggered the interrupt. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___shared_8h_a2eabf7638cb747b067c95eb98c5370bd}{disable\+Interrupts}} ()
+\begin{DoxyCompactList}\small\item\em This function disables the all interrupts on the MPU6050. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shared functions and macros. 
+
+This file includes all the function prototypes, macros, and needed header files for the MPU\+\_\+\+Shared.\+c which has the definitions of functions used by all the other source files of the MPU6050 library. It does not need to be included as all other files include it. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_p_u___shared_8h_a3bfe1eeb15ce8676cc81b637d2b7dbbf}\label{_m_p_u___shared_8h_a3bfe1eeb15ce8676cc81b637d2b7dbbf}} 
+\index{MPU\_Shared.h@{MPU\_Shared.h}!setAD0@{setAD0}}
+\index{setAD0@{setAD0}!MPU\_Shared.h@{MPU\_Shared.h}}
+\doxysubsubsection{\texorpdfstring{setAD0()}{setAD0()}}
+{\footnotesize\ttfamily void set\+AD0 (\begin{DoxyParamCaption}\item[{char}]{pin\+Value }\end{DoxyParamCaption})}
+
+
+
+This function sets the value used for the AD0 bit in the MPU6050\textquotesingle{}s I2C 7 bit address and its value should match that of the pin i.\+e. 
+
+1 (High) or 0 (Low). 
+\begin{DoxyParams}{Parameters}
+{\em pin\+Value} & The value of the AD0 pin on the MPU6050 IC. Note\+: all values other than 0 will be taken as 1. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}, and \mbox{\hyperlink{_m_p_u__self_test_example_8cpp-example}{MPU\+\_\+\+Self\+Test\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___shared_8h_aed3fcddfb71c0ce5ebf4e1f74fb2fcd2}\label{_m_p_u___shared_8h_aed3fcddfb71c0ce5ebf4e1f74fb2fcd2}} 
+\index{MPU\_Shared.h@{MPU\_Shared.h}!writeToReg@{writeToReg}}
+\index{writeToReg@{writeToReg}!MPU\_Shared.h@{MPU\_Shared.h}}
+\doxysubsubsection{\texorpdfstring{writeToReg()}{writeToReg()}}
+{\footnotesize\ttfamily char write\+To\+Reg (\begin{DoxyParamCaption}\item[{char}]{reg\+Addr,  }\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+This function writes a byte into a register on the MPU6050. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Addr} & The address of the register in the MPU6050\textquotesingle{}s register map. \\
+\hline
+{\em data} & The value that will be written to that register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___shared_8h_a51415c7cab55990d857ee11187087e7d}\label{_m_p_u___shared_8h_a51415c7cab55990d857ee11187087e7d}} 
+\index{MPU\_Shared.h@{MPU\_Shared.h}!readFromReg@{readFromReg}}
+\index{readFromReg@{readFromReg}!MPU\_Shared.h@{MPU\_Shared.h}}
+\doxysubsubsection{\texorpdfstring{readFromReg()}{readFromReg()}}
+{\footnotesize\ttfamily char read\+From\+Reg (\begin{DoxyParamCaption}\item[{char}]{reg\+Addr,  }\item[{char $\ast$}]{data,  }\item[{char}]{n }\end{DoxyParamCaption})}
+
+
+
+This function will read from a register/s on the MPU6050. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Addr} & The address of the first register to read from in the MPU6050\textquotesingle{}s register map. \\
+\hline
+{\em data} & A pointer to the start of an array of bytes that the read data will be written to. \\
+\hline
+{\em n} & The number of registers to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___shared_8h_a10cd7c280775d4236cadad43a4073ab8}\label{_m_p_u___shared_8h_a10cd7c280775d4236cadad43a4073ab8}} 
+\index{MPU\_Shared.h@{MPU\_Shared.h}!readInterruptStatus@{readInterruptStatus}}
+\index{readInterruptStatus@{readInterruptStatus}!MPU\_Shared.h@{MPU\_Shared.h}}
+\doxysubsubsection{\texorpdfstring{readInterruptStatus()}{readInterruptStatus()}}
+{\footnotesize\ttfamily char read\+Interrupt\+Status (\begin{DoxyParamCaption}\item[{char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+This function reads the status of all 3 possible interrupt sources (FIFO OVF, I2C Master INT, Data RDY INT) on the MPU6050 to determine the source which triggered the interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & pointer to char that will hold the read value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___shared_8h_a2eabf7638cb747b067c95eb98c5370bd}\label{_m_p_u___shared_8h_a2eabf7638cb747b067c95eb98c5370bd}} 
+\index{MPU\_Shared.h@{MPU\_Shared.h}!disableInterrupts@{disableInterrupts}}
+\index{disableInterrupts@{disableInterrupts}!MPU\_Shared.h@{MPU\_Shared.h}}
+\doxysubsubsection{\texorpdfstring{disableInterrupts()}{disableInterrupts()}}
+{\footnotesize\ttfamily char disable\+Interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function disables the all interrupts on the MPU6050. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}

@@ -1,0 +1,56 @@
+\hypertarget{_m_p_u__self_test_example_8cpp-example}{}\doxysection{MPU\+\_\+\+Self\+Test\+Example.\+cpp}
+This examples shows how to use the \mbox{\hyperlink{_m_p_u___self_test_8h}{MPU\+\_\+\+Self\+Test.\+h}} functions to calculate the percent change from the factory trim for the 3 gyroscopes.
+
+This examples shows how to use the \mbox{\hyperlink{_m_p_u___self_test_8h}{MPU\+\_\+\+Self\+Test.\+h}} functions to calculate the percent change from the factory trim for the 3 gyroscopes. The exact same procedure would be done for the accelerometers.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_m_p_u___basic_8h}{MPU\_Basic.h}}"{}} \textcolor{comment}{/* For readings data from the IMU */}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_m_p_u___self_test_8h}{MPU\_SelfTest.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{/* Testing the 3 gyroscopes */}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordtype}{int} gyroReadingsRaw[3] = \{0, 0, 0\};         \textcolor{comment}{// Readings with self-\/test disabled.}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} gyroReadingsSelfTest[3] = \{0, 0, 0\};    \textcolor{comment}{// Readings with self-\/test enabled.}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} gyroFactoryTrim[3] = \{0, 0, 0\};         \textcolor{comment}{// Factory trim for each gyro.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    I2CInit(); \textcolor{comment}{// Initialize I2C peripheral.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___shared_8h_a3bfe1eeb15ce8676cc81b637d2b7dbbf}{setAD0}}(0);}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_ab4c1323116d55098039cae30b0bba485}{deviceReset}}();                               \textcolor{comment}{// To erase any previous configurations.}}
+\DoxyCodeLine{    \textcolor{comment}{// It's advised to create some delay between reseting the IMU and waking it back up.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_a2af13c87c6049b0933511bf2432f93fe}{wakeUp}}();                                     \textcolor{comment}{// Wake up from sleep mode.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_a603f65b6b53b7e220dfb9c1f2a053cdf}{setGyroFS\_Range}}(0); \textcolor{comment}{// +-\/250dps              // Required gyro FS range for testing.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_ab6a6b7236260a1bfb50cfdaccd1ac287}{setAccFS\_Range}}(2); \textcolor{comment}{//  +-\/8g                   // Required accelerometer FS range for testing.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___self_test_8h_af039c3dd4054f85a4662a744c8b4f0f6}{getFactoryTrimGyro}}(gyroFactoryTrim);      \textcolor{comment}{// Retrieve the factory trim data for the gyros.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}{getGyroReadings}}(gyroReadingsRaw, 0, 0);      \textcolor{comment}{// Get raw readings before enabling the self-\/test.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___self_test_8h_aab9df0d9a2c4666f934d8d7316c43f2a}{gyroSelfTestEn}}();                         \textcolor{comment}{// Enable the self-\/test feature for the gyros.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}{getGyroReadings}}(gyroReadingsSelfTest,0,0);  \textcolor{comment}{// Get readings with self-\/test enabled.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordtype}{int} gyroSelfTestResponse[3];}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i = 0; i < 3; i++)        \textcolor{comment}{// Calculate the self-\/test response.}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        gyroSelfTestResponse[i] = gyroReadingsSelfTest[i] -\/ gyroReadingsRaw[i];}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordtype}{float} changeFromFactoryTrim[3];}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i = 0; i < 3; i++)        \textcolor{comment}{// The \% change should be in between +-\/2\% for a functional IMU.}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        changeFromFactoryTrim[i] = ((float) gyroSelfTestResponse[i] -\/ gyroFactoryTrim[i]) / gyroFactoryTrim[i];}
+\DoxyCodeLine{        changeFromFactoryTrim[i] = 100 * changeFromFactoryTrim[i]; \textcolor{comment}{// Convert to percentage.}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* It's advised to take many samples while self-\/test is enabled and while it's disabled and to use}}
+\DoxyCodeLine{\textcolor{comment}{     * the mean of these values to calculate the change from the factory trim to have more reliable results.}}
+\DoxyCodeLine{\textcolor{comment}{     */}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{    }
+
+\end{DoxyCodeInclude}
+ 

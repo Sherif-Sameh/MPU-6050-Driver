@@ -1,0 +1,4 @@
+\_form#0=241x28:\[
+  \textnormal{Change from the factory trim} = \frac{STR - FT}{FT}
+\]
+\_form#1=391x14:$ STR = (\textnormal{Output with self test enabled} - \textnormal{Output with self test disabled}) $

@@ -1,0 +1,194 @@
+\hypertarget{_m_p_u___advanced_8h}{}\doxysection{MPU\+\_\+\+Advanced.\+h File Reference}
+\label{_m_p_u___advanced_8h}\index{MPU\_Advanced.h@{MPU\_Advanced.h}}
+
+
+For changing the device\textquotesingle{}s configuration.  
+
+
+{\ttfamily \#include \char`\"{}MPU\+\_\+\+Shared.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}{clock\+Source}} \{ \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65aa15f5d3836ab058c624ddaa9d1676b05}{int\+Osc}}
+, \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a0a094c24a7728e6768dfbb43fd38231c}{gyroX}}
+, \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a2d0e4ab62324e0df854d988543878ed0}{gyroY}}
+, \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65acd62f0d4c060bbd457ded7636267129b}{gyroZ}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum for choosing the clock source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_ab040ee003f3b18a999e28619b894c39f}{set\+Clock\+Source}} (enum \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}{clock\+Source}} CS)
+\begin{DoxyCompactList}\small\item\em This function is used to set a clock source, by default the internal oscillator is used. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_a77966a9441dd99c3e23989dc30fcdb93}{reset\+Acc\+Signal\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This function will revert the ADC and DLPF settings for the accelerometers to their default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_a9c7219eb9c205f594f3979061e656141}{reset\+Gyro\+Signal\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This function will revert the ADC and DLPF settings for the gyroscopes to their default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_aae465c3812a2a10e8bb4eea5e9efbe31}{reset\+Temp\+Signal\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This function will revert the ADC and DLPF settings for the temperature sensor to their default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_a0b62aca05e1fe182fb47a35fa2d22421}{data\+RDY\+\_\+\+IE}} ()
+\begin{DoxyCompactList}\small\item\em This function will enable the data ready interrupt which is set everytime new readings are written to the sensor registers after passing by the ADC and the DLPF. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}{set\+DLPF}} (char DLPF\+\_\+\+CFG)
+\begin{DoxyCompactList}\small\item\em This function is used to configure the digital low-\/pass filter (DLPF) for both the gyroscope and accelerometer readings. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{_m_p_u___advanced_8h_a9d28826b743d54fe32bdd16dbbd4ebdd}{set\+Sample\+Rate}} (int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em This function sets the sample rate divider of the MPU6050 according to the desired sample rate and the current DLPF settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For changing the device\textquotesingle{}s configuration. 
+
+This file includes all the function prototypes and macros for changing the configuration of the MPU6050 such as clock source, sample rate, enable data ready interrupt, etc.... 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}\label{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!clockSource@{clockSource}}
+\index{clockSource@{clockSource}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{clockSource}{clockSource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}{clock\+Source}}}
+
+
+
+An enum for choosing the clock source. 
+
+Chooses between internal oscillator or one of the gyros. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{intOsc@{intOsc}!MPU\_Advanced.h@{MPU\_Advanced.h}}\index{MPU\_Advanced.h@{MPU\_Advanced.h}!intOsc@{intOsc}}}\mbox{\Hypertarget{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65aa15f5d3836ab058c624ddaa9d1676b05}\label{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65aa15f5d3836ab058c624ddaa9d1676b05}} 
+int\+Osc&Internal oscillator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gyroX@{gyroX}!MPU\_Advanced.h@{MPU\_Advanced.h}}\index{MPU\_Advanced.h@{MPU\_Advanced.h}!gyroX@{gyroX}}}\mbox{\Hypertarget{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a0a094c24a7728e6768dfbb43fd38231c}\label{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a0a094c24a7728e6768dfbb43fd38231c}} 
+gyroX&X-\/axis gyroscope. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gyroY@{gyroY}!MPU\_Advanced.h@{MPU\_Advanced.h}}\index{MPU\_Advanced.h@{MPU\_Advanced.h}!gyroY@{gyroY}}}\mbox{\Hypertarget{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a2d0e4ab62324e0df854d988543878ed0}\label{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a2d0e4ab62324e0df854d988543878ed0}} 
+gyroY&Y-\/axis gyroscope. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gyroZ@{gyroZ}!MPU\_Advanced.h@{MPU\_Advanced.h}}\index{MPU\_Advanced.h@{MPU\_Advanced.h}!gyroZ@{gyroZ}}}\mbox{\Hypertarget{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65acd62f0d4c060bbd457ded7636267129b}\label{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65acd62f0d4c060bbd457ded7636267129b}} 
+gyroZ&Z-\/axis gyroscope. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_ab040ee003f3b18a999e28619b894c39f}\label{_m_p_u___advanced_8h_ab040ee003f3b18a999e28619b894c39f}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!setClockSource@{setClockSource}}
+\index{setClockSource@{setClockSource}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{setClockSource()}{setClockSource()}}
+{\footnotesize\ttfamily char set\+Clock\+Source (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65}{clock\+Source}}}]{CS }\end{DoxyParamCaption})}
+
+
+
+This function is used to set a clock source, by default the internal oscillator is used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CS} & The enum of type clock\+Source used to set the clock source of the MPU6050. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+It is recommended by the manufacturer to use one of the gyros for improved clock stability. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_a77966a9441dd99c3e23989dc30fcdb93}\label{_m_p_u___advanced_8h_a77966a9441dd99c3e23989dc30fcdb93}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!resetAccSignalPath@{resetAccSignalPath}}
+\index{resetAccSignalPath@{resetAccSignalPath}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{resetAccSignalPath()}{resetAccSignalPath()}}
+{\footnotesize\ttfamily char reset\+Acc\+Signal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function will revert the ADC and DLPF settings for the accelerometers to their default values. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_a9c7219eb9c205f594f3979061e656141}\label{_m_p_u___advanced_8h_a9c7219eb9c205f594f3979061e656141}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!resetGyroSignalPath@{resetGyroSignalPath}}
+\index{resetGyroSignalPath@{resetGyroSignalPath}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{resetGyroSignalPath()}{resetGyroSignalPath()}}
+{\footnotesize\ttfamily char reset\+Gyro\+Signal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function will revert the ADC and DLPF settings for the gyroscopes to their default values. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_aae465c3812a2a10e8bb4eea5e9efbe31}\label{_m_p_u___advanced_8h_aae465c3812a2a10e8bb4eea5e9efbe31}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!resetTempSignalPath@{resetTempSignalPath}}
+\index{resetTempSignalPath@{resetTempSignalPath}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{resetTempSignalPath()}{resetTempSignalPath()}}
+{\footnotesize\ttfamily char reset\+Temp\+Signal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function will revert the ADC and DLPF settings for the temperature sensor to their default values. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_a0b62aca05e1fe182fb47a35fa2d22421}\label{_m_p_u___advanced_8h_a0b62aca05e1fe182fb47a35fa2d22421}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!dataRDY\_IE@{dataRDY\_IE}}
+\index{dataRDY\_IE@{dataRDY\_IE}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{dataRDY\_IE()}{dataRDY\_IE()}}
+{\footnotesize\ttfamily char data\+RDY\+\_\+\+IE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function will enable the data ready interrupt which is set everytime new readings are written to the sensor registers after passing by the ADC and the DLPF. 
+
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}\label{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!setDLPF@{setDLPF}}
+\index{setDLPF@{setDLPF}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{setDLPF()}{setDLPF()}}
+{\footnotesize\ttfamily char set\+DLPF (\begin{DoxyParamCaption}\item[{char}]{DLPF\+\_\+\+CFG }\end{DoxyParamCaption})}
+
+
+
+This function is used to configure the digital low-\/pass filter (DLPF) for both the gyroscope and accelerometer readings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DLPF\+\_\+\+CFG} & This is the value written to the register and ranges from 0 to 6, the exact bandwidth and delay associated with each value can found in page 13 of the MPU6050\textquotesingle{}s register map document. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_m_p_u___advanced_8h_a9d28826b743d54fe32bdd16dbbd4ebdd}\label{_m_p_u___advanced_8h_a9d28826b743d54fe32bdd16dbbd4ebdd}} 
+\index{MPU\_Advanced.h@{MPU\_Advanced.h}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!MPU\_Advanced.h@{MPU\_Advanced.h}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily char set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{int}]{sample\+Rate }\end{DoxyParamCaption})}
+
+
+
+This function sets the sample rate divider of the MPU6050 according to the desired sample rate and the current DLPF settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+Rate} & The desired sampling rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+It\textquotesingle{}s advised to recall this function everytime \mbox{\hyperlink{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}{set\+DLPF(char DLPF\+\_\+\+CFG)}} is called because that could indirectly change the sampling rate. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Will return 1 upon successful completion or 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_m_p_u__advanced_example_8cpp-example}{MPU\+\_\+\+Advanced\+Example.\+cpp}}.\end{Desc}

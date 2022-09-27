@@ -1,0 +1,63 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}File Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}File List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Advanced.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Detailed Description}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Enumeration Type Documentation}{4}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}clockSource}{4}{subsubsection.2.1.2.1}%
+\contentsline {subsection}{\numberline {2.1.3}Function Documentation}{4}{subsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3.1}setClockSource()}{4}{subsubsection.2.1.3.1}%
+\contentsline {subsubsection}{\numberline {2.1.3.2}resetAccSignalPath()}{5}{subsubsection.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {2.1.3.3}resetGyroSignalPath()}{5}{subsubsection.2.1.3.3}%
+\contentsline {subsubsection}{\numberline {2.1.3.4}resetTempSignalPath()}{5}{subsubsection.2.1.3.4}%
+\contentsline {subsubsection}{\numberline {2.1.3.5}dataRDY\_IE()}{6}{subsubsection.2.1.3.5}%
+\contentsline {subsubsection}{\numberline {2.1.3.6}setDLPF()}{6}{subsubsection.2.1.3.6}%
+\contentsline {subsubsection}{\numberline {2.1.3.7}setSampleRate()}{6}{subsubsection.2.1.3.7}%
+\contentsline {section}{\numberline {2.2}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Advanced.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Basic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Detailed Description}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Function Documentation}{8}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}wakeUp()}{8}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}deviceReset()}{8}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}setAccFS\_Range()}{8}{subsubsection.2.3.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.2.4}setGyroFS\_Range()}{9}{subsubsection.2.3.2.4}%
+\contentsline {subsubsection}{\numberline {2.3.2.5}getAccReadings()}{10}{subsubsection.2.3.2.5}%
+\contentsline {subsubsection}{\numberline {2.3.2.6}getGyroReadings()}{10}{subsubsection.2.3.2.6}%
+\contentsline {subsubsection}{\numberline {2.3.2.7}getTempReadings()}{11}{subsubsection.2.3.2.7}%
+\contentsline {section}{\numberline {2.4}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Basic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FIFO.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Detailed Description}{12}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Function Documentation}{12}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}FIFO\_Reset()}{12}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}FIFO\_Enable()}{13}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}FIFO\_Disable()}{13}{subsubsection.2.5.2.3}%
+\contentsline {subsubsection}{\numberline {2.5.2.4}readFIFO\_count()}{13}{subsubsection.2.5.2.4}%
+\contentsline {subsubsection}{\numberline {2.5.2.5}readFIFO()}{13}{subsubsection.2.5.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.2.6}FIFO\_OVF\_IE()}{14}{subsubsection.2.5.2.6}%
+\contentsline {subsubsection}{\numberline {2.5.2.7}gyroFIFO\_En()}{14}{subsubsection.2.5.2.7}%
+\contentsline {subsubsection}{\numberline {2.5.2.8}accFIFO\_En()}{14}{subsubsection.2.5.2.8}%
+\contentsline {subsubsection}{\numberline {2.5.2.9}tempFIFO\_EN()}{15}{subsubsection.2.5.2.9}%
+\contentsline {section}{\numberline {2.6}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FIFO.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.2.6}%
+\contentsline {section}{\numberline {2.7}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Self\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Detailed Description}{16}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Function Documentation}{16}{subsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.1}accSelfTestEn()}{16}{subsubsection.2.7.2.1}%
+\contentsline {subsubsection}{\numberline {2.7.2.2}gyroSelfTestEn()}{16}{subsubsection.2.7.2.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.3}getFactoryTrimGyro()}{16}{subsubsection.2.7.2.3}%
+\contentsline {subsubsection}{\numberline {2.7.2.4}getFactoryTrimAcc()}{17}{subsubsection.2.7.2.4}%
+\contentsline {section}{\numberline {2.8}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Self\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.2.8}%
+\contentsline {section}{\numberline {2.9}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{17}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Detailed Description}{18}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Function Documentation}{18}{subsection.2.9.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.1}setAD0()}{18}{subsubsection.2.9.2.1}%
+\contentsline {subsubsection}{\numberline {2.9.2.2}writeToReg()}{19}{subsubsection.2.9.2.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.3}readFromReg()}{19}{subsubsection.2.9.2.3}%
+\contentsline {subsubsection}{\numberline {2.9.2.4}readInterruptStatus()}{19}{subsubsection.2.9.2.4}%
+\contentsline {subsubsection}{\numberline {2.9.2.5}disableInterrupts()}{20}{subsubsection.2.9.2.5}%
+\contentsline {section}{\numberline {2.10}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Example Documentation}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Basic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Examples.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Self\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}MPU\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Advanced\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{22}{section.3.3}%
+\contentsline {chapter}{Index}{25}{section*.8}%

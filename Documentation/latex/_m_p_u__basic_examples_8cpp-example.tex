@@ -1,0 +1,67 @@
+\hypertarget{_m_p_u__basic_examples_8cpp-example}{}\doxysection{MPU\+\_\+\+Basic\+Examples.\+cpp}
+This is an example on how to use the functions, from the \mbox{\hyperlink{_m_p_u___basic_8h}{MPU\+\_\+\+Basic.\+h}} file, for retrieving the on-\/board sensor readings.
+
+This is an example on how to use the functions, from the \mbox{\hyperlink{_m_p_u___basic_8h}{MPU\+\_\+\+Basic.\+h}} file, for retrieving the on-\/board sensor readings.\+You will find examples on reading from all 3 sensors (X,Y,Z) or only specific ones as well as retrieving the temperature sensor readings.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_m_p_u___basic_8h}{MPU\_Basic.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{/* Read all 3 accelerometers raw values */}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} accReadings[3];}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} status = \mbox{\hyperlink{_m_p_u___basic_8h_a229d941e7fbdfdfbabef0ca8104de314}{getAccReadings}}(accReadings, 0, 0);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation was successful and accReadings now contains all 3 raw readings ordered from AccX at index 0 to AccZ at index 2. */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation failed and appropriate action should be taken. */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Read raw reading for the X-\/axis accelerometer only */}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} accX;}
+\DoxyCodeLine{    status = \mbox{\hyperlink{_m_p_u___basic_8h_a229d941e7fbdfdfbabef0ca8104de314}{getAccReadings}}(\&accX, 0, 2);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation was successful and the value of the X-\/axis accelerometer has been loaded into the accX variable */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation failed and appropriate action should be taken. */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Read raw reading for the Y-\/axis gyroscope only */}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} \mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a2d0e4ab62324e0df854d988543878ed0}{gyroY}};}
+\DoxyCodeLine{    status = \mbox{\hyperlink{_m_p_u___basic_8h_a52a4ffc23317aa4fd9c15b0f2889de17}{getGyroReadings}}(\&\mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65a2d0e4ab62324e0df854d988543878ed0}{gyroY}}, 1, 1);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation was successful and the value of the Y-\/axis gyroscope has been loaded into the gyroY variable */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation failed and appropriate action should be taken. */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Read raw reading for the temperature sensor */}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} temp;}
+\DoxyCodeLine{    status = \mbox{\hyperlink{_m_p_u___basic_8h_a3c94d6bb5188abc8b6376803288e6373}{getTempReadings}}(\&temp);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation was successful and the value of the temperature sensor has been loaded into the temp variable */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{/* Operation failed and appropriate action should be taken. */}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Note: The status checks are advised but obviously not mandatory at every step. */}}
+
+\end{DoxyCodeInclude}
+ 

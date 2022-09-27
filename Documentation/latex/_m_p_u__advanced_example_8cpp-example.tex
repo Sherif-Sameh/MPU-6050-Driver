@@ -1,0 +1,36 @@
+\hypertarget{_m_p_u__advanced_example_8cpp-example}{}\doxysection{MPU\+\_\+\+Advanced\+Example.\+cpp}
+This example shows how to change the MPU6050\textquotesingle{}s configuration using the functions from \mbox{\hyperlink{_m_p_u___advanced_8h}{MPU\+\_\+\+Advanced.\+h}}.
+
+This example shows how to change the MPU6050\textquotesingle{}s configuration using the functions from \mbox{\hyperlink{_m_p_u___advanced_8h}{MPU\+\_\+\+Advanced.\+h}}.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_m_p_u___advanced_8h}{MPU\_Advanced.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    I2CInit();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___shared_8h_a3bfe1eeb15ce8676cc81b637d2b7dbbf}{setAD0}}(0);}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_ab4c1323116d55098039cae30b0bba485}{deviceReset}}();                   \textcolor{comment}{// To erase any previous configurations.}}
+\DoxyCodeLine{                                    \textcolor{comment}{// Insert some delay here.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___basic_8h_a2af13c87c6049b0933511bf2432f93fe}{wakeUp}}();                         \textcolor{comment}{// Wake up from sleep mode.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Configuration 1: DLPF = 2, Sample Rate = 200Hz, Clock Source = Z-\/axis gyroscope */}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_ab040ee003f3b18a999e28619b894c39f}{setClockSource}}(\mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65acd62f0d4c060bbd457ded7636267129b}{gyroZ}});           \textcolor{comment}{// Set the clock source as Z-\/axis gyro.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}{setDLPF}}(2);                      \textcolor{comment}{// Gyro Bandwidth = 98Hz and Accelerometer Bandwidth = 94Hz.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_a9d28826b743d54fe32bdd16dbbd4ebdd}{setSampleRate}}(200);                \textcolor{comment}{// Set the sampling rate to 200Hz.}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Configuration 2: DLPF = 0, Sample Rate = 500Hz, Clock Source = Internal Oscillator */}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_ab040ee003f3b18a999e28619b894c39f}{setClockSource}}(\mbox{\hyperlink{_m_p_u___advanced_8h_ac1d73f8fcfec5a31cf432886b3361d65aa15f5d3836ab058c624ddaa9d1676b05}{intOsc}});         \textcolor{comment}{// Set the clock source as the internal oscillator.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_a51be8a21b9561bda974f96a56603f680}{setDLPF}}(0);                      \textcolor{comment}{// Gyro Bandwidth = 256Hz and Accelerometer Bandwidth = 260Hz.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_m_p_u___advanced_8h_a9d28826b743d54fe32bdd16dbbd4ebdd}{setSampleRate}}(500);                \textcolor{comment}{// Set the sampling rate to 500Hz.}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{    }
+
+\end{DoxyCodeInclude}
+ 

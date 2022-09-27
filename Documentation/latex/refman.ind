@@ -1,0 +1,150 @@
+\begin{theindex}
+
+  \item {accFIFO\_En}
+    \subitem {MPU\_FIFO.h}, \hyperpage{14}
+  \item {accSelfTestEn}
+    \subitem {MPU\_SelfTest.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {clockSource}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {dataRDY\_IE}
+    \subitem {MPU\_Advanced.h}, \hyperpage{5}
+  \item {deviceReset}
+    \subitem {MPU\_Basic.h}, \hyperpage{8}
+  \item {disableInterrupts}
+    \subitem {MPU\_Shared.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {FIFO\_Disable}
+    \subitem {MPU\_FIFO.h}, \hyperpage{13}
+  \item {FIFO\_Enable}
+    \subitem {MPU\_FIFO.h}, \hyperpage{12}
+  \item {FIFO\_OVF\_IE}
+    \subitem {MPU\_FIFO.h}, \hyperpage{14}
+  \item {FIFO\_Reset}
+    \subitem {MPU\_FIFO.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {getAccReadings}
+    \subitem {MPU\_Basic.h}, \hyperpage{9}
+  \item {getFactoryTrimAcc}
+    \subitem {MPU\_SelfTest.h}, \hyperpage{17}
+  \item {getFactoryTrimGyro}
+    \subitem {MPU\_SelfTest.h}, \hyperpage{16}
+  \item {getGyroReadings}
+    \subitem {MPU\_Basic.h}, \hyperpage{10}
+  \item {getTempReadings}
+    \subitem {MPU\_Basic.h}, \hyperpage{10}
+  \item {gyroFIFO\_En}
+    \subitem {MPU\_FIFO.h}, \hyperpage{14}
+  \item {gyroSelfTestEn}
+    \subitem {MPU\_SelfTest.h}, \hyperpage{16}
+  \item {gyroX}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+  \item {gyroY}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+  \item {gyroZ}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {intOsc}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {MPU\_Advanced.h}, \hyperpage{3}
+    \subitem {clockSource}, \hyperpage{4}
+    \subitem {dataRDY\_IE}, \hyperpage{5}
+    \subitem {gyroX}, \hyperpage{4}
+    \subitem {gyroY}, \hyperpage{4}
+    \subitem {gyroZ}, \hyperpage{4}
+    \subitem {intOsc}, \hyperpage{4}
+    \subitem {resetAccSignalPath}, \hyperpage{5}
+    \subitem {resetGyroSignalPath}, \hyperpage{5}
+    \subitem {resetTempSignalPath}, \hyperpage{5}
+    \subitem {setClockSource}, \hyperpage{4}
+    \subitem {setDLPF}, \hyperpage{6}
+    \subitem {setSampleRate}, \hyperpage{6}
+  \item {MPU\_Basic.h}, \hyperpage{7}
+    \subitem {deviceReset}, \hyperpage{8}
+    \subitem {getAccReadings}, \hyperpage{9}
+    \subitem {getGyroReadings}, \hyperpage{10}
+    \subitem {getTempReadings}, \hyperpage{10}
+    \subitem {setAccFS\_Range}, \hyperpage{8}
+    \subitem {setGyroFS\_Range}, \hyperpage{9}
+    \subitem {wakeUp}, \hyperpage{8}
+  \item {MPU\_FIFO.h}, \hyperpage{11}
+    \subitem {accFIFO\_En}, \hyperpage{14}
+    \subitem {FIFO\_Disable}, \hyperpage{13}
+    \subitem {FIFO\_Enable}, \hyperpage{12}
+    \subitem {FIFO\_OVF\_IE}, \hyperpage{14}
+    \subitem {FIFO\_Reset}, \hyperpage{12}
+    \subitem {gyroFIFO\_En}, \hyperpage{14}
+    \subitem {readFIFO}, \hyperpage{13}
+    \subitem {readFIFO\_count}, \hyperpage{13}
+    \subitem {tempFIFO\_EN}, \hyperpage{14}
+  \item {MPU\_SelfTest.h}, \hyperpage{15}
+    \subitem {accSelfTestEn}, \hyperpage{16}
+    \subitem {getFactoryTrimAcc}, \hyperpage{17}
+    \subitem {getFactoryTrimGyro}, \hyperpage{16}
+    \subitem {gyroSelfTestEn}, \hyperpage{16}
+  \item {MPU\_Shared.h}, \hyperpage{17}
+    \subitem {disableInterrupts}, \hyperpage{20}
+    \subitem {readFromReg}, \hyperpage{19}
+    \subitem {readInterruptStatus}, \hyperpage{19}
+    \subitem {setAD0}, \hyperpage{18}
+    \subitem {writeToReg}, \hyperpage{19}
+
+  \indexspace
+
+  \item {readFIFO}
+    \subitem {MPU\_FIFO.h}, \hyperpage{13}
+  \item {readFIFO\_count}
+    \subitem {MPU\_FIFO.h}, \hyperpage{13}
+  \item {readFromReg}
+    \subitem {MPU\_Shared.h}, \hyperpage{19}
+  \item {readInterruptStatus}
+    \subitem {MPU\_Shared.h}, \hyperpage{19}
+  \item {resetAccSignalPath}
+    \subitem {MPU\_Advanced.h}, \hyperpage{5}
+  \item {resetGyroSignalPath}
+    \subitem {MPU\_Advanced.h}, \hyperpage{5}
+  \item {resetTempSignalPath}
+    \subitem {MPU\_Advanced.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {setAccFS\_Range}
+    \subitem {MPU\_Basic.h}, \hyperpage{8}
+  \item {setAD0}
+    \subitem {MPU\_Shared.h}, \hyperpage{18}
+  \item {setClockSource}
+    \subitem {MPU\_Advanced.h}, \hyperpage{4}
+  \item {setDLPF}
+    \subitem {MPU\_Advanced.h}, \hyperpage{6}
+  \item {setGyroFS\_Range}
+    \subitem {MPU\_Basic.h}, \hyperpage{9}
+  \item {setSampleRate}
+    \subitem {MPU\_Advanced.h}, \hyperpage{6}
+
+  \indexspace
+
+  \item {tempFIFO\_EN}
+    \subitem {MPU\_FIFO.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {wakeUp}
+    \subitem {MPU\_Basic.h}, \hyperpage{8}
+  \item {writeToReg}
+    \subitem {MPU\_Shared.h}, \hyperpage{19}
+
+\end{theindex}
