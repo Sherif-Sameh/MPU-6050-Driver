@@ -21,7 +21,7 @@ char readFIFO_count(int* count)
 {
   char c[2];
   char tmp = readFromReg(0x72, c, 2);
-  *count = ((c[0]<<8) | c[1]);
+  *count = ((c[0]<<8) | ((unsigned char) c[1]));
   return tmp;
 }
 
